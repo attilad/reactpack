@@ -13,6 +13,17 @@ import DevTools from './containers/devTools';
 import Parent from './components/parent';
 import Child from './components/child';
 
+let Routes = (
+    <ReduxRouter>
+        <Route path="/" component={App}>
+            <Route path="parent" component={Parent}>
+                <Route path="child" component={Child} />
+                <Route path="child/:id" component={Child} />
+            </Route>
+        </Route>
+    </ReduxRouter>
+);
+
 let node = document.getElementById('app');
 let store;
 let component;
@@ -22,14 +33,7 @@ if (__DEV__ === 'true') {
     component = (
         <Provider store={store}>
             <div>
-                <ReduxRouter>
-                    <Route path="/" component={App}>
-                        <Route path="parent" component={Parent}>
-                            <Route path="child" component={Child} />
-                            <Route path="child/:id" component={Child} />
-                        </Route>
-                    </Route>
-                </ReduxRouter>
+                {Routes}
                 <DevTools />
             </div>
         </Provider>
@@ -38,7 +42,7 @@ if (__DEV__ === 'true') {
     store = configureStore();
     component = (
         <Provider store={store}>
-            <App />
+            {Routes}
         </Provider>
     );
 }
