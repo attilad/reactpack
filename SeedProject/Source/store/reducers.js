@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import { routerStateReducer } from 'redux-router';
 import {INCREMENT, DECREMENT} from './actions'
 
 function counter(state = 0, action = {}) {
@@ -12,7 +13,7 @@ function counter(state = 0, action = {}) {
     }
 }
 
-const reducers = combineReducers({ counter });
+const reducers = combineReducers({ counter, router: routerStateReducer });
 
 export default reducers;
 
