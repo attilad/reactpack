@@ -213,3 +213,6 @@ ModelManifest.xml
 
 # Node
 node_modules/
+
+# WebStorm
+.idea/
