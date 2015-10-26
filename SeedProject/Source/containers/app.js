@@ -15,7 +15,10 @@ class App extends React.Component {
         return (
             <div>
                 <Header message={text} />
-                <Counter count={counter} onUp={()=>dispatch(increment())} onDown={()=>dispatch(decrement())} />
+                <Counter count={counter}
+                         onUp={() => dispatch(increment())}
+                         onDown={() => dispatch(decrement())}
+                    />
             </div>
         );
     }
