@@ -19,6 +19,7 @@ class App extends React.Component {
                          onUp={() => dispatch(increment())}
                          onDown={() => dispatch(decrement())}
                     />
+                {this.props.children}
             </div>
         );
     }
