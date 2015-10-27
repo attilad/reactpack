@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import {increment, decrement} from '../store/actions';
 
+import { Link } from 'react-router';
 import text from '../data/content';
 import Header from '../components/header';
 import Counter from '../components/counter.js';
@@ -20,6 +21,7 @@ class App extends React.Component {
                          onDown={() => dispatch(decrement())}
                     />
                 {this.props.children}
+                <p><Link to='/values'>Values</Link></p>
             </div>
         );
     }

@@ -1,24 +1,33 @@
-﻿using System;
+﻿using SeedProject.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace SeedProject.Controllers
 {
     public class ValuesController : ApiController
     {
-        // GET api/<controller>
-        public IEnumerable<string> Get()
+        private readonly Dictionary<int, Gizmo> _values;
+        public ValuesController()
         {
-            return new string[] { "value1", "value2" };
+            _values = new Dictionary<int, Gizmo>();
+
+            _values.Add(1, new Gizmo { Id = 1, Value = "Value 1" } );
+            _values.Add(2, new Gizmo { Id = 2, Value = "Value 2" });
+            _values.Add(3, new Gizmo { Id = 3, Value = "Value 3" });
+        }
+
+        // GET api/<controller>
+        public IEnumerable<Gizmo> Get()
+        {
+            return _values.Values.AsEnumerable();
         }
 
         // GET api/<controller>/5
-        public string Get(int id)
+        public Gizmo Get(int id)
         {
-            return "value";
+            return _values[id];
         }
 
         // POST api/<controller>

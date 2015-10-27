@@ -1,3 +1,5 @@
+import 'babel-core/polyfill';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -8,6 +10,7 @@ import configureStore from './store/store';
 import configureDevStore from './store/devStore';
 
 import App from './containers/app';
+import Values from './containers/values';
 import DevTools from './containers/devTools';
 
 import Parent from './components/parent';
@@ -21,6 +24,7 @@ let Routes = (
                 <Route path="child/:id" component={Child} />
             </Route>
         </Route>
+        <Route path="values" component={Values} />
     </ReduxRouter>
 );
 

@@ -28,12 +28,16 @@
     "webpack-dev-server": "^1.12.1"
   },
   "dependencies": {
+    "es6-promise": "^3.0.2",
     "history": "^1.12.6",
+    "isomorphic-fetch": "^2.2.0",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "react-redux": "^4.0.0",
     "react-router": "^1.0.0-rc3",
     "redux": "^3.0.4",
-    "redux-router": "^1.0.0-beta3"
+    "redux-logger": "^2.0.4",
+    "redux-router": "^1.0.0-beta3",
+    "redux-thunk": "^1.0.0"
   }
 }
