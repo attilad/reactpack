@@ -1,7 +1,7 @@
 ﻿var webpack = require('webpack');
 
 module.exports = {
-    entry: "./source/index.js",
+    entry: ["./source/index.js", "webpack-hot-middleware/client"],
     output: {
         path: __dirname,
         filename: "scripts/bundle.js"
@@ -14,6 +14,7 @@ module.exports = {
         ]
     },
     plugins: [
+        new webpack.HotModuleReplacementPlugin(),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
             __DEV__: JSON.stringify(process.env.DEBUG)

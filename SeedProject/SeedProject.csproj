@@ -82,26 +82,44 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Source\container\app.js" />
+    <Content Include="comboserve.js" />
+    <Content Include="readme.txt" />
+    <Content Include="server.js" />
+    <Content Include="Source\actions\counter.js" />
+    <Content Include="Source\components\child.js" />
+    <Content Include="Source\components\counter.js" />
+    <Content Include="Source\components\header.js" />
+    <Content Include="Source\components\parent.js" />
+    <Content Include="Source\containers\app.js" />
+    <Content Include="Source\containers\devTools.js" />
+    <Content Include="Source\containers\values.js" />
     <Content Include="Source\data\content.js" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="Source\index.js" />
+    <Content Include="Source\actions\values.js" />
+    <Content Include="Source\store\devStore.js" />
+    <Content Include="Source\reducers\reducers.js" />
+    <Content Include="Source\store\store.js" />
     <Content Include="Web.config" />
     <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Gizmo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="package.json" />
-    <Content Include="Source\container\app.scss" />
     <Content Include="Source\variables.scss" />
+    <Content Include="Source\containers\app.scss" />
+    <Content Include="Source\components\counter.scss" />
+    <Content Include="Source\containers\values.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -111,10 +129,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
     <Folder Include="Scripts\" />
-    <Folder Include="Source\components\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
