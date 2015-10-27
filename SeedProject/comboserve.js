@@ -1,22 +1,26 @@
 ﻿var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var webpackDevMiddleware = require("webpack-dev-middleware");
+var webpackHotMiddleware = require('webpack-hot-middleware');
 var config = require('./webpack.config');
 
 var express = require('express');
 var proxy = require('proxy-middleware');
 var url = require('url');
 
+var compiler = webpack(config);
+
 var app = express();
 app.use('/api', proxy(url.parse('http://localhost:51926/api/')));
-app.use(webpackDevMiddleware(webpack(config), {
+app.use(webpackDevMiddleware(compiler, {
+    noInfo: true,
     publicPath: config.output.publicPath,
-    hot: true,
     historyApiFallback: true,
     stats: {
         colors: true
     }
 }));
+app.use(webpackHotMiddleware(compiler));
 
 app.get('/*', function (req, res) {
     res.sendFile(__dirname + '/index.html');
