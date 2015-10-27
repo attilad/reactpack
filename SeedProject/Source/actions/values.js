@@ -2,21 +2,11 @@ import fetch from 'isomorphic-fetch';
 
 /* Action Types */
 
-export const INCREMENT = 'INCREMENT';
-export const DECREMENT = 'DECREMENT';
 export const REQUEST_VALUES = 'REQUEST_VALUES';
 export const RECEIVE_VALUES = 'RECEIVE_VALUES';
 export const INVALIDATE_VALUES = 'INVALIDATE_VALUES';
 
 /* Action Creators */
-
-export function increment() {
-    return { type: INCREMENT };
-}
-
-export function decrement() {
-    return { type: DECREMENT };
-}
 
 function requestValues() {
     return { type: REQUEST_VALUES }

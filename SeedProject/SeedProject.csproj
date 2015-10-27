@@ -85,6 +85,7 @@
     <Content Include="comboserve.js" />
     <Content Include="readme.txt" />
     <Content Include="server.js" />
+    <Content Include="Source\actions\counter.js" />
     <Content Include="Source\components\child.js" />
     <Content Include="Source\components\counter.js" />
     <Content Include="Source\components\header.js" />
@@ -96,9 +97,9 @@
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="Source\index.js" />
-    <Content Include="Source\store\actions.js" />
+    <Content Include="Source\actions\values.js" />
     <Content Include="Source\store\devStore.js" />
-    <Content Include="Source\store\reducers.js" />
+    <Content Include="Source\reducers\reducers.js" />
     <Content Include="Source\store\store.js" />
     <Content Include="Web.config" />
     <Content Include="webpack.config.js" />

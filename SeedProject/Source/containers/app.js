@@ -1,7 +1,7 @@
 ﻿import React from 'react';
 import { connect } from 'react-redux';
 
-import {increment, decrement} from '../store/actions';
+import {increment, decrement} from '../actions/counter';
 
 import { Link } from 'react-router';
 import text from '../data/content';

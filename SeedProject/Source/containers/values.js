@@ -1,7 +1,7 @@
 ﻿import React from 'react';
 import { connect } from 'react-redux';
 
-import { invalidateValues, fetchValuesIfNeeded } from '../store/actions';
+import { invalidateValues, fetchValuesIfNeeded } from '../actions/values';
 
 import './values.scss';
 

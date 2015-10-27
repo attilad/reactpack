@@ -3,7 +3,7 @@ import { reduxReactRouter } from 'redux-router';
 import { createHistory } from 'history';
 import thunkMiddleware from 'redux-thunk';
 
-import reducers from './reducers';
+import reducers from '../reducers/reducers';
 
 const createStoreWithMiddleware = applyMiddleware(thunkMiddleware)(createStore);
 

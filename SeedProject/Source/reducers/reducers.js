@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 import { routerStateReducer } from 'redux-router';
-import { INCREMENT, DECREMENT, REQUEST_VALUES, RECEIVE_VALUES, INVALIDATE_VALUES } from './actions';
+import { REQUEST_VALUES, RECEIVE_VALUES, INVALIDATE_VALUES } from '../actions/values';
+import { INCREMENT, DECREMENT } from '../actions/counter';
 
 function counter(state = 0, action = {}) {
     switch(action.type) {

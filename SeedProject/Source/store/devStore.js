@@ -4,7 +4,7 @@ import { createHistory } from 'history';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 
-import reducers from './reducers';
+import reducers from '../reducers/reducers';
 import DevTools from '../containers/devTools';
 
 const finalCreateStore = compose(
@@ -18,8 +18,8 @@ export default function configureDevStore(initialState){
 
     if (module.hot) {
         // Enable Webpack hot module replacement for reducers
-        module.hot.accept('./reducers', () => {
-            const nextRootReducer = require('./reducers');
+        module.hot.accept('../reducers', () => {
+            const nextRootReducer = require('../reducers');
             store.replaceReducer(nextRootReducer);
         });
     }
