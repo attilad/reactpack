@@ -1,5 +1,4 @@
 ﻿var webpack = require('webpack');
-var WebpackDevServer = require('webpack-dev-server');
 var webpackDevMiddleware = require("webpack-dev-middleware");
 var webpackHotMiddleware = require('webpack-hot-middleware');
 var config = require('./webpack.config');
@@ -22,8 +21,8 @@ app.use(webpackDevMiddleware(compiler, {
 }));
 app.use(webpackHotMiddleware(compiler));
 
-app.get('/*', function (req, res) {
-    res.sendFile(__dirname + '/index.html');
+app.use(function(req, res) {
+  res.sendFile(__dirname + '/index-dev.html');
 });
 
 app.listen(3000, 'localhost', function (err) {

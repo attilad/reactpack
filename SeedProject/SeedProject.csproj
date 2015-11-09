@@ -82,27 +82,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="comboserve.js" />
     <Content Include="readme.txt" />
-    <Content Include="server.js" />
-    <Content Include="Source\actions\counter.js" />
-    <Content Include="Source\components\child.js" />
-    <Content Include="Source\components\counter.js" />
-    <Content Include="Source\components\header.js" />
-    <Content Include="Source\components\parent.js" />
-    <Content Include="Source\containers\app.js" />
-    <Content Include="Source\containers\devTools.js" />
-    <Content Include="Source\containers\values.js" />
-    <Content Include="Source\data\content.js" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
-    <Content Include="Source\index.js" />
-    <Content Include="Source\actions\values.js" />
-    <Content Include="Source\store\devStore.js" />
-    <Content Include="Source\reducers\reducers.js" />
-    <Content Include="Source\store\store.js" />
+    <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\vendors.js" />
     <Content Include="Web.config" />
-    <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -115,11 +100,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="package.json" />
-    <Content Include="Source\variables.scss" />
-    <Content Include="Source\containers\app.scss" />
-    <Content Include="Source\components\counter.scss" />
-    <Content Include="Source\containers\values.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -129,7 +109,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Scripts\" />
+    <Folder Include="Images\" />
+    <Folder Include="Styles\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -163,6 +144,9 @@
     <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
+  <PropertyGroup>
+    <PostBuildEvent>npm run-script release</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
