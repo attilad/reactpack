@@ -1,4 +1,4 @@
-import fetch from 'isomorphic-fetch';
+import request from 'superagent';
 
 /* Action Types */
 
@@ -17,7 +17,7 @@ export function invalidateValues() {
 }
 
 function receiveValues(json) {
-    return { 
+    return {
         type: RECEIVE_VALUES,
         values: json
     }
@@ -26,9 +26,9 @@ function receiveValues(json) {
 function fetchValues() {
     return dispatch => {
         dispatch(requestValues());
-        return fetch('/api/values/')
-            .then(response => response.json())
-            .then(json => dispatch(receiveValues(json)));
+        return request.get('/api/values/').end(function(err, res) {
+            return dispatch(receiveValues(res.body));
+        });
     };
 }
 
