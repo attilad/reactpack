@@ -10,7 +10,8 @@ module.exports = {
     output: {
         path: __dirname,
         publicPath: "/",
-        filename: jsDir + "bundle.js"
+        filename: jsDir + "bundle.js",
+        apiUrl: 'http://localhost:51926/api/'
     },
     module: {
         loaders: [

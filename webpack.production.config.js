@@ -2,7 +2,7 @@
 var webpack = require('webpack');
 var node_modules_dir = path.resolve(__dirname, 'node_modules');
 
-var projectDir = 'SeedProject/';
+var projectDir = 'SampleProject/';
 
 var imagesDir = 'images/';
 var stylesDir = 'styles/';

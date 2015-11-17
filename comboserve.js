@@ -10,7 +10,7 @@ var url = require('url');
 var compiler = webpack(config);
 
 var app = express();
-app.use('/api', proxy(url.parse('http://localhost:51926/api/')));
+app.use('/api', proxy(url.parse(config.output.apiUrl)));
 app.use(webpackDevMiddleware(compiler, {
     noInfo: true,
     publicPath: config.output.publicPath,
