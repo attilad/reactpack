@@ -1,5 +1,6 @@
 ﻿var path = require('path');
 var webpack = require('webpack');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var node_modules_dir = path.resolve(__dirname, 'node_modules');
 
 var projectDir = 'SampleProject/';
@@ -26,11 +27,11 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.scss$/, loaders: ["style", "css", "sass"] },
+            { test: /\.scss$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader") },
             { test: /\.js$/, exclude: node_modules_dir, loaders: ["react-hot", "babel-loader"] },
             { test: /\.(ttf|eot|svg|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'file-loader?name=' + fontsPath + '/[name].[ext]' },
             { test: /\.(jpg|png|gif)$/, loader: 'file-loader?name=' + imagesPath + '/[name].[ext]' },
-            { test: /\.css$/, loader: 'file-loader?name=' + stylesDir + '/[name].[ext]' }
+            { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader") }
         ]
     },
     plugins: [
@@ -38,6 +39,11 @@ module.exports = {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
             __DEV__: JSON.stringify(process.env.DEBUG)
-        })
+        }),
+        new ExtractTextPlugin(stylesPath + "[name].css"),
+        new webpack.ProvidePlugin({
+           $: "jquery",
+           jQuery: "jquery"
+         })
     ]
 };
