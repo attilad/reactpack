@@ -4,8 +4,7 @@
   "description": "A source project for .net Api, React, and Webpack",
   "main": "server.js",
   "scripts": {
-    "start": "set NODE_ENV=development&&set DEBUG=true&&node comboserve.js",
-    "release": "set NODE_ENV=production&&set DEBUG=false&&webpack -p --config webpack.production.config.js"
+    "start": "set NODE_ENV=development&&set DEBUG=true&&node comboserve.js"
   },
   "author": "Attila DeLisle",
   "license": "ISC",
