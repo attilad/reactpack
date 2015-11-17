@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("WebpackTest")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("SampleProject")]
+[assembly: AssemblyDescription("A sample API project to use with React and Webpack")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("WebpackTest")]
+[assembly: AssemblyCompany("Attila DeLisle")]
+[assembly: AssemblyProduct("SampleProject")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

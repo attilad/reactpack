@@ -1,4 +1,4 @@
-﻿namespace SeedProject.Models
+﻿namespace SampleProject.Models
 {
     public class Gizmo
     {
