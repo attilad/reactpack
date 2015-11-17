@@ -13,6 +13,7 @@
     "babel-loader": "^5.3.2",
     "css-loader": "^0.21.0",
     "express": "^4.13.3",
+    "extract-text-webpack-plugin": "^0.9.1",
     "file-loader": "^0.8.4",
     "image-webpack-loader": "^1.6.2",
     "node-sass": "^3.3.3",

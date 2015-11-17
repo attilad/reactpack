@@ -219,6 +219,6 @@ node_modules/
 Deploy/
 *.hot-update.js
 *.hot-update.json
-SeedProject/styles/
-SeedProject/scripts/
-SeedProject/images/
+SampleProject/styles/
+SampleProject/scripts/
+SampleProject/images/
