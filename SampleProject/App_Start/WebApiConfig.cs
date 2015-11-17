@@ -2,7 +2,7 @@
 using System.Net.Http.Headers;
 using System.Web.Http;
 
-namespace WebpackTest
+namespace SampleProject
 {
     public static class WebApiConfig
     {

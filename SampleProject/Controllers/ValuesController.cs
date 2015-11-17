@@ -1,10 +1,9 @@
-﻿using SeedProject.Models;
-using System;
+﻿using SampleProject.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace SeedProject.Controllers
+namespace SampleProject.Controllers
 {
     public class ValuesController : ApiController
     {
